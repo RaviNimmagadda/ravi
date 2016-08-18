@@ -33,7 +33,7 @@ public class JMSQueueReceiver {
 
 			conn = factory.createConnection();
 			conn.start();
-			System.out.println("Got the connection");
+			System.out.println("connection is established");
 			Queue queue = (Queue) ctx.lookup("jms/MyQueue");
 			session = conn.createSession(false, JMSContext.AUTO_ACKNOWLEDGE);
 			MessageConsumer consumer = session.createConsumer(queue);
